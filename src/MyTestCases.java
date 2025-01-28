@@ -38,9 +38,7 @@ public class MyTestCases {
 
 		AllRadioButtons.get(randomIndex).click();
 
-		// to click on the first item
-		// AllRadioButtons.get(0).click();
-
+	
 	}
 	
 	
@@ -82,13 +80,6 @@ public class MyTestCases {
 		
 		Select sel = new Select(SelectElement);
 		
-		
-		//sel.selectByIndex(3);
-		
-		//sel.selectByValue("option2");
-		
-		//sel.deselectByVisibleText("API");
-
 	}
 	
 	
@@ -98,20 +89,6 @@ public class MyTestCases {
 		List<WebElement> Checkbox = driver.findElements(By.xpath("//input[@type='checkbox']"));
 		int randomIndex = rand.nextInt(Checkbox.size());
 		
-		
-//		System.out.println(randomIndex);
-		
-//		Checkbox.get(53).click();
-//		
-//		Thread.sleep(1000);
-//		Checkbox.get(randomIndex).click();
-//		
-//		Thread.sleep(1000);
-//		Checkbox.get(randomIndex).click();
-		
-		
-		
-		//to select them all
 		for(int i = 0 ; i < Checkbox.size() ; i++) {
 			
 			Thread.sleep(1000);
@@ -130,14 +107,12 @@ public class MyTestCases {
 		Thread.sleep(2000);
 		List<String> windowHandles = new ArrayList<String>(driver.getWindowHandles());
 		
-		// number of opened windows
+		
 		System.out.println(windowHandles.size());
 		
 		
-		//switch to another window
 		driver.switchTo().window(windowHandles.get(1));
 		
-		//in the second window
 		WebElement ContactButton = driver.findElement(By.id("menu-item-9680"));
 		ContactButton.click();
 		
@@ -145,7 +120,6 @@ public class MyTestCases {
 		
 		driver.close();
 		
-		//switch to the first window
 		driver.switchTo().window(windowHandles.get(0));
 
 	}
@@ -179,17 +153,8 @@ public class MyTestCases {
 		
 		Thread.sleep(1000);
 		driver.switchTo().alert().accept();
-//		driver.switchTo().alert().dismiss();
-		
-//		WebElement confirmBox = driver.findElement(By.id("confirmbtn"));
-//		confirmBox.click();
-		
-		Thread.sleep(1000);
-		
-//		driver.switchTo().alert().accept();
-//		driver.switchTo().alert().dismiss();
-//		
-//		System.out.println(driver.switchTo().alert().getText());
+
+	 Thread.sleep(1000);
 		
 
 	}
